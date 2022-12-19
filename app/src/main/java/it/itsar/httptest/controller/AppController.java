@@ -22,8 +22,8 @@ public class AppController extends Application {
         getRequestQueue().add(request);
     }
 
-    public static synchronized AppController getInstace() {
-        return instance ;
+    public static synchronized AppController getInstance() {
+        return instance;
     }
 
     @Override

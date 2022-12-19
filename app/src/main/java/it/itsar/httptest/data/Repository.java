@@ -12,12 +12,12 @@ public class Repository {
 
     public void getPosts() {
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, urlPost, null, response -> {
-            Log.d("risposta", "ciao");
+            Log.d("risposta", response.toString());
         },
         error -> {
             Log.d("errore", error.toString());
         });
 
-        AppController.getInstace().addRequestQueue(request);
+        AppController.getInstance().addRequestQueue(request);
     }
 }
